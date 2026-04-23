@@ -1,0 +1,67 @@
+seed: 43
+
+paths:
+  train_csv: data/train/train.csv
+  dev_csv: data/dev/dev.csv
+  audio_root: data
+  output_dir: outputs/scratch_reverb_seed43
+
+train:
+  batch_size: 16
+  num_workers: 2
+  epochs: 22
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  grad_clip: 5.0
+  device: auto
+  print_every: 100
+  use_amp: true
+  lr_schedule:
+    enabled: true
+    warmup_epochs: 1.5
+    min_lr_ratio: 0.05
+  sampler:
+    speaker_balanced: true
+    alpha: 0.5
+  augment:
+    gain_prob: 0.5
+    gain_db_min: -6.0
+    gain_db_max: 6.0
+    noise_prob: 0.3
+    noise_std_min: 0.001
+    noise_std_max: 0.01
+    speed_prob: 0.3
+    speed_min_rate: 0.9
+    speed_max_rate: 1.1
+    waveform:
+      mp3_prob: 0.35
+      mp3_bitrates: [48, 64, 96, 128]
+      bandwidth_prob: 0.25
+      bandwidth_cutoff_min_hz: 3500.0
+      bandwidth_cutoff_max_hz: 7500.0
+      pitch_prob: 0.3
+      pitch_semitones_min: -2.5
+      pitch_semitones_max: 2.5
+      reverb_prob: 0.35
+      reverb_rt60_min: 0.04
+      reverb_rt60_max: 0.25
+      reverb_wet_min: 0.15
+      reverb_wet_max: 0.55
+    spec_augment:
+      time_mask_count: 3
+      time_mask_max_frames: 25
+      time_mask_ratio: 0.08
+      freq_mask_count: 2
+      freq_mask_max_bins: 20
+
+model:
+  sample_rate: 16000
+  n_fft: 400
+  win_length: 400
+  hop_length: 160
+  n_mels: 80
+  conv_channels: 192
+  encoder_dim: 256
+  hidden_size: 256
+  num_gru_layers: 3
+  dropout: 0.2

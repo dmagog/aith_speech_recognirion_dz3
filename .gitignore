@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Virtualenvs
+.venv/
+.venv_*/
+venv/
+env/
+
+# OS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+.claude/
+
+# Credentials
+.kaggle/
+kaggle.json
+*.pem
+.env
+
+# Data (провайдеры соревнования — не коммитим)
+data/
+
+# Веса моделей — раздаются через GitHub Release
+*.pt
+!tests/**/*.pt
+
+# Кернел и датасет-метаданные содержат идентификаторы; выборочно коммитим
+kaggle_assets/full_test_kernel/__pycache__/
+kaggle_assets/full_test_kernel/output/
+kaggle_assets/full_test_kernel/output_v*/
+kaggle_assets/full_test_kernel/output_latest/
+kaggle_assets/weights_dataset/best*.pt
+
+# Выход обучения — не коммитим промежуточные чекпоинты и логи
+outputs/baseline_quick/
+outputs/baseline_quick_smoke/
+outputs/aug_v2*/
+outputs/scratch_full_aug/
+outputs/reverb_cont/
+outputs/scratch_reverb_seed43/
+outputs/best_submission/*.pt
+outputs/best_submission/*.csv
+!outputs/report_figures/
+
+# Временное
+kaggle_kernel_probe/
+/tmp_*

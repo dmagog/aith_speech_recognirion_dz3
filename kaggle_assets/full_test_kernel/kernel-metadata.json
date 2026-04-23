@@ -1,0 +1,19 @@
+{
+  "id": "georgymamarin/asr-spoken-numbers-full-test-infer",
+  "title": "ASR Spoken Numbers Full Test Infer",
+  "code_file": "run_inference.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": "true",
+  "enable_gpu": "true",
+  "enable_tpu": "false",
+  "enable_internet": "false",
+  "dataset_sources": [
+    "georgymamarin/asr-numbers-best-checkpoint"
+  ],
+  "competition_sources": [
+    "asr-2026-spoken-numbers-recognition-challenge"
+  ],
+  "kernel_sources": [],
+  "model_sources": []
+}
