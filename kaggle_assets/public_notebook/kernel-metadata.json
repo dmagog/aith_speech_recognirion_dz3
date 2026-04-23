@@ -1,15 +1,17 @@
 {
-  "id": "dmagog/asr-numbers-public-inference",
-  "title": "ASR Numbers Public Inference",
+  "id": "georgymamarin/asr-numbers-inference-public",
+  "title": "ASR Numbers Inference Public",
   "code_file": "kaggle_inference.ipynb",
   "language": "python",
   "kernel_type": "notebook",
-  "is_private": "true",
-  "enable_gpu": "true",
+  "is_private": "false",
+  "enable_gpu": "false",
   "enable_tpu": "false",
   "enable_internet": "true",
   "dataset_sources": [],
-  "competition_sources": [],
+  "competition_sources": [
+    "asr-2026-spoken-numbers-recognition-challenge"
+  ],
   "kernel_sources": [],
   "model_sources": []
 }
