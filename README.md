@@ -113,7 +113,16 @@ python3 scripts/eval_ensemble.py \
 - [notebooks/kaggle_inference.ipynb](notebooks/kaggle_inference.ipynb) — локальная версия.
 - [kaggle_assets/full_test_kernel/run_inference.py](kaggle_assets/full_test_kernel/run_inference.py) — эквивалентный скрипт.
 
-На Kaggle — kernel `georgymamarin/asr-spoken-numbers-full-test-infer` (ссылка в сабмите).
+Опубликован на Kaggle: <https://www.kaggle.com/code/dmagog/asr-numbers-public-inference>.
+
+### Как запустить в Kaggle
+
+1. Откройте ноутбук по ссылке выше и нажмите **Copy & Edit** (либо через Kaggle → Code → New Notebook → Import → выбрать файл [notebooks/kaggle_inference.ipynb](notebooks/kaggle_inference.ipynb)).
+2. Settings → **Internet: On** (требуется верификация телефона на Kaggle).
+3. Add data → **Competition**: `asr-2026-spoken-numbers-recognition-challenge`.
+4. Run All.
+
+Если интернет недоступен, ноутбук автоматически ищет веса в `/kaggle/input/**/best.pt` и `/kaggle/input/**/best_seed43.pt`. В этом случае дополнительно нужно подключить Kaggle Dataset с весами (например, скачать веса из GitHub Release и загрузить их в приватный Kaggle Dataset).
 
 ## Структура проекта
 
